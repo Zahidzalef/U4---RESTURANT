@@ -1,7 +1,6 @@
 import os
 os.system("cls")
 
-
 masalar = dict()
 for a in range(20):
     masalar[a] = 0
@@ -18,7 +17,7 @@ def hesap_odeme():
     bakiye = masalar[masa_no]
     print("Masa {}'in hesabı : {} TL".format(masa_no,bakiye))
     masalar[masa_no] = 0
-    print("Hesap ödendi.")
+    print("Hesap ödendi.\nYine bekleriz.")
 def dosya_kontrolu(dosya_adi):
     try:
         dosya = open(dosya_adi,"r",encoding="utf-8")
@@ -45,7 +44,7 @@ def ana_islem():
     dosya_kontrolu("bakiye.txt")
     while True:
         print("""
-            ZALEF RESTURANT UYGULAMASI
+                ZALEF RESTURANT UYGULAMASI
             0) KAPAT
             1) MASALARI GÖRÜNTÜLE
             2) HESAP EKLE
